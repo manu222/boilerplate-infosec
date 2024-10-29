@@ -19,6 +19,8 @@ app.use(helmet.hsts({maxAge: 90*24*60*60, force: true}));
 app.use(helmet.ieNoOpen());
 //DNS Prefetch Control
 app.use(helmet.dnsPrefetchControl());
+//no cache, disable caching in the browser 
+app.use(helmet.noCache());
 
 
 module.exports = app;
