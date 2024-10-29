@@ -22,6 +22,8 @@ app.use(helmet.contentSecurityPolicy({
 //prevent MIME sniffing
 app.use(helmet.noSniff());
 
+//Untrusted HTML 
+app.use(helmet.ieNoOpen());
 
 module.exports = app;
 const api = require('./server.js');
