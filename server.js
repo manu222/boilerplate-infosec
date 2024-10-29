@@ -3,12 +3,13 @@
  * the verification process may break
  *******************************************/
 
+const bcrypt = require('bcrypt');
 var express = require("express");
 var app = express();
 app.disable("x-powered-by");
 var fs = require("fs");
 var path = require("path");
-const bcrypt = require('bcrypt');
+
 
 
 
