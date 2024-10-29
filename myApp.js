@@ -7,31 +7,8 @@ const helmet = require('helmet');
 //hide Xpress using helmet
 app.use(helmet.hidePoweredBy());
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//prevent clickjacking
+app.use(helmet.frameguard({ action: 'deny' }));
 
 
 
