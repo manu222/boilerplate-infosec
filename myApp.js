@@ -21,6 +21,12 @@ app.use(helmet.ieNoOpen());
 app.use(helmet.dnsPrefetchControl());
 //no cache, disable caching in the browser 
 app.use(helmet.noCache());
+//Content Security Policy
+app.use(helmet.contentSecurityPolicy({ directives: {
+   defaultSrc: ["'self'"],
+   scriptSrc: ["'self'", "trusted-cdn.com"] 
+  } 
+}));
 
 
 module.exports = app;
