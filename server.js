@@ -9,7 +9,8 @@ app.disable("x-powered-by");
 var fs = require("fs");
 var path = require("path");
 
-const brcrypt = require("bcrypt");
+const bcrypt = require("bcrypt");
+
 
 
 
