@@ -4,7 +4,8 @@
 	"description": "fcc backend boilerplate",
 	"main": "server.js",
 	"scripts": {
-		"start": "node myApp.js"
+		"start": "node myApp.js",
+		"test": "jest"
 	},
 	"dependencies": {
 		"bcrypt": "^5.1.1",
