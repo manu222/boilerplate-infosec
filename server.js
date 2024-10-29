@@ -11,19 +11,15 @@ var fs = require("fs");
 var path = require("path");
 const bcrypt = require('bcrypt');
 
-//continue bcrypt
-const saltRounds = 12;
-const myPlaintextPassword = 'myPassword';
-const someOtherPlaintextPassword = 'not_bacon';
 
-bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
-  bcrypt.compare(myPlaintextPassword, hash, function(err, res) {
-    console.log(res);
-  });
-  bcrypt.compare(someOtherPlaintextPassword, hash, function(err, res) {
-    console.log(res);
-  });
-});
+
+
+
+
+
+
+
+
 
 
 
