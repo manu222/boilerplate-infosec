@@ -9,6 +9,8 @@ app.use(helmet.hidePoweredBy());
 
 //prevent clickjacking
 app.use(helmet.frameguard({ action: 'deny' }));
+//prevent XSS protection
+app.use(helmet.xssFilter());
 
 
 
