@@ -11,14 +11,7 @@ app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({ action: 'deny' }));
 //prevent XSS protection
 app.use(helmet.xssFilter());
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    defaultSrc: ["'self'"],
-    scriptSrc: ["'self'"], // Asegúrate de ajustar según tus necesidades
-    objectSrc: ["'none'"],
-    upgradeInsecureRequests: [],
-  }
-}));
+
 //prevent MIME sniffing
 app.use(helmet.noSniff());
 
