@@ -16,6 +16,8 @@ app.use(helmet.noSniff());
 //HTTP Strict Transport Security (HSTS)
 //maxAge is set to 90 days in seconds, force is set to true to force HTTPS connection 
 app.use(helmet.hsts({maxAge: 90*24*60*60, force: true}));
+//DNS Prefetch Control
+app.use(helmet.dnsPrefetchControl());
 
 
 //Untrusted HTML 
