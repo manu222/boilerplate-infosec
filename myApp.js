@@ -11,7 +11,8 @@ app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({ action: 'deny' }));
 //prevent XSS protection
 app.use(helmet.xssFilter());
-
+//prevent MIME sniffing
+app.use(helmet.noSniff());
 
 
 module.exports = app;
